@@ -9,7 +9,7 @@ form.addEventListener("submit", (event) => {
 });
 
 async function searchLyrics(songTitle, artistName) {
-  const API_KEY = "xJVGGPEDWU5edsPMFbb89zdmP2usfoO7XKjpM8sQT-fm9XhK-w7aeGsfE2JNQ7mp";
+  const API_KEY = "mmS6G7n2A0KciJoLS6KqYrxrcXUUV-opGUOrhD8YAwsgTTxcAyg3B1I4MnBgOlgk";
   const response = await fetch(`https://api.genius.com/search?q=${songTitle} ${artistName}`, {
     headers: {
       "Authorization": `Bearer ${API_KEY}`
@@ -21,7 +21,7 @@ async function searchLyrics(songTitle, artistName) {
 }
 
 async function getLyrics(songId) {
-  const API_KEY = "xJVGGPEDWU5edsPMFbb89zdmP2usfoO7XKjpM8sQT-fm9XhK-w7aeGsfE2JNQ7mp";
+  const API_KEY = "mmS6G7n2A0KciJoLS6KqYrxrcXUUV-opGUOrhD8YAwsgTTxcAyg3B1I4MnBgOlgk";
   const response = await fetch(`https://api.genius.com/songs/${songId}`, {
     headers: {
       "Authorization": `Bearer ${API_KEY}`
