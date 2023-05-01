@@ -1,49 +1,49 @@
 body {
-    font-family: Arial, sans-serif;
+    background-color: rgb(33,19,13);
+    color: #776E56;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 2%;
+}
+
+
+h1#title {
+    font-size: 80px;
+    font-weight: bold;
     margin: 0;
-    padding: 0;
-  }
-  
-  h1 {
+    display: block;
+    float: left;
+}
+
+.container {
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div#score-cont{
+    position: relative;
+    float: right;
+    background-color:#776E56;
+    color: antiquewhite;
+    height: 25px;
+    padding: 15px 20px;
+    padding-bottom: 30px;
+    margin-top: 10px;
     text-align: center;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-  }
-  
-  label {
-    margin: 10px;
-  }
-  
-  input {
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    margin: 10px;
-    width: 300px;
-  }
-  
-  button {
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    margin: 10px;
-    width: 100px;
-    background-color: #4CAF50;
+}
+
+div#score{
+    font-weight: bold;
+    font-size: 25px;
     color: white;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #3e8e41;
-  }
-  
-  #lyrics {
-    margin: 20px;
-    white-space: pre-wrap;
-  }
-  
+}
+
+p#Anweisungen {
+    position: relative;
+    float: left;
+}
+
+span{
+    font-weight: bold;
+}
+

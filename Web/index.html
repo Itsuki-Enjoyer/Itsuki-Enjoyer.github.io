@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Lyrics Finder</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <h1>Lyrics Finder</h1>
-    <form id="search-form">
-      <label for="song">Song Title:</label>
-      <input type="text" id="song" name="song" required>
-      <label for="artist">Artist Name:</label>
-      <input type="text" id="artist" name="artist" required>
-      <button type="submit">Search</button>
-    </form>
-    <div id="lyrics"></div>
-    <script src="app.js"></script>
-  </body>
+    <head>
+        <meta charset="utf-8">
+        <title>2048</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1 id="title">2048</h1>
+            <div id="score-cont">
+                <div id="score-ti">PUNKTE: </div>
+                <div id="score"></div>
+            </div>
+            <p id="Anweisungen">Benutze die Pfeiltasten, um die Steine hin und her zu schieben und den <span>2048</span> Sieg zu bekommen.</p>
+        </div>
+        <script src="script.js"> </script>
+    </body>
 </html>
