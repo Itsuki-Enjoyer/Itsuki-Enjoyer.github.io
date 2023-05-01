@@ -1,12 +1,15 @@
 const GRID_SIZE = 4;
 const CELL_SIZE = 100;
-const touchElement = document.getElementById('touch-element')
+
+
+
 
 var canvas;
 var grid;
 var gameOver;
 var score;
 var gameWon;
+
 
 
 scoreContainer = document.getElementById("score");
@@ -19,9 +22,7 @@ function setup() {
     newGame();
     noLoop();
     updateGrid();
-    canvas.touchStarted(handleTouchStart);
-    canvas.touchMoved(handleTouchMove);
-    canvas.touchEnded(handleTouchEnd);      
+          
 }
 
 /* Zentriert die Spielfläche */
@@ -173,45 +174,6 @@ function horizontalSlide(direction) {
     checkSlide(previousGrid);
 }
 
-function handleTouchStart() {
-    startX = mouseX;
-    startY = mouseY;
-  }
-  
-
-function handleTouchMove() {
-    // Calculate the change in x and y coordinates
-    var dx = mouseX - startX;
-    var dy = mouseY - startY;
-  
-    // Determine whether the user has swiped horizontally or vertically
-    if (abs(dx) > abs(dy)) {
-      if (dx > 0) {
-        // Right swipe
-        horizontalSlide(RIGHT_ARROW);
-      } else {
-        // Left swipe
-        horizontalSlide(LEFT_ARROW);
-      }
-    } else {
-      if (dy > 0) {
-        // Down swipe
-        verticalSlide(DOWN_ARROW);
-      } else {
-        // Up swipe
-        verticalSlide(UP_ARROW);
-      }
-    }
-  
-    // Reset the starting coordinates
-    startX = mouseX;
-    startY = mouseY;
-  }
-  
-
-function handleTouchEnd() {
-    // Do nothing
-  }
 
 
 /* prüft, ob ein Spielfeld nicht leer ist (Wert ist nicht Null). Wird verwendet, um eine Reihe von Steinen zu filtern */
@@ -409,40 +371,40 @@ function drawGrid() {
             //color of tile depends on value of tile
             switch (grid[i * GRID_SIZE + j]) {
                 case 0:
-                    c = color("#CDC0B4");
+                    c = color("#fcf8ed");
                     break;
                 case 2:
-                    c = color("#EEE4DA");
+                    c = color("#a7dbb1");
                     break;
                 case 4:
-                    c = color("#EDE0C8");
+                    c = color("#99c7ad");
                     break;
                 case 8:
-                    c = color("#B2DFDB");
+                    c = color("#8ab3a9");
                     break;
                 case 16:
-                    c = color("#80CBC4");
+                    c = color("#7a9ea4");
                     break;
                 case 32:
-                    c = color("#4DB6AC");
+                    c = color("#67839e");
                     break;
                 case 64:
-                    c = color("#26A69A");
+                    c = color("#536998");
                     break;
                 case 128:
-                    c = color("#009688");
+                    c = color("#3c4c8a");
                     break;
                 case 256:
-                    c = color("#00897B");
+                    c = color("#222d72");
                     break;
                 case 512:
-                    c = color("#00796B");
+                    c = color("#080e5b");
                     break;
                 case 1024:
-                    c = color("#00695C");
+                    c = color("#070d52");
                     break;
                 case 2048:
-                    c = color("#004D40");
+                    c = color("#050837");
                     break;
             }
 
