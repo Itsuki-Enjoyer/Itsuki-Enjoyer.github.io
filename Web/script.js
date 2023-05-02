@@ -1,6 +1,9 @@
 const GRID_SIZE = 4;
 const CELL_SIZE = 100;
 
+const GRID2_SIZE = 3;
+const CELL2_SIZE = 70;
+
 const reloadButton = document.getElementById("reload");
 const leftButton = document.getElementById("left");
 const rightButton = document.getElementById("right");
@@ -12,11 +15,13 @@ const downButton = document.getElementById("down");
 
 
 
+
 var canvas;
 var grid;
 var gameOver;
 var score;
 var gameWon;
+var gamePad;
 
 
 
@@ -36,14 +41,15 @@ function setup() {
 /* Zentriert die Spielfläche */
 function centerCanvas() {
     var x = (windowWidth - width) / 2;
-    var y = (windowHeight - height) / 2 + 40;
-    canvas.position(x, y);
+    var y = (windowHeight - height) / 2 - 500;
+    canvas.position(x,y);
 }
 
 /* Zentriert die Spielfläche auf dem Fenster, wenn die Größe des Fensters geändert wird */
 function windowResized() {
     centerCanvas();
 }
+
 
 /* erstellt ein neues Spiel mit dem Startspielbrett */
 function newGame() {
