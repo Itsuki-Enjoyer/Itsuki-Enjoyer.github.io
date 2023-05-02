@@ -1,6 +1,14 @@
 const GRID_SIZE = 4;
 const CELL_SIZE = 100;
 
+const reloadButton = document.getElementById("reload");
+const leftButton = document.getElementById("left");
+const rightButton = document.getElementById("right");
+const upButton = document.getElementById("up");
+const downButton = document.getElementById("down");
+
+
+
 
 
 
@@ -62,6 +70,10 @@ function updateGrid() {
     }
 }
 
+
+function KeyBind(){
+
+}
 /* aktualisiert das Spielfeld mit den richtigen Steinen/Farben
 zeigt den Punktestand an und beendet das Spiel
 wenn keine Züge mehr übrig sind 
@@ -97,9 +109,27 @@ function keyPressed() {
         }
     }
 }
-
 /* verschiebt die Steine vertikal (nach oben oder unten) und kombiniert Steine mit dem
 gleichen Wertes, wenn sie kollidieren. */
+upButton.addEventListener("click",function() {
+    verticalSlide(UP_ARROW);
+    updateGrid();
+});
+downButton.addEventListener("click",function() {
+    verticalSlide(DOWN_ARROW);
+    updateGrid();
+});
+leftButton.addEventListener("click",function() {
+    horizontalSlide(LEFT_ARROW);
+    updateGrid();
+});
+rightButton.addEventListener("click",function() {
+    horizontalSlide(RIGHT_ARROW);
+    updateGrid();
+});
+reloadButton.addEventListener("click",setup);
+
+
 function verticalSlide(direction) {
     var previousGrid = [];
     var column;

@@ -48,8 +48,55 @@ span{
     font-weight: bold;
 }
 
-.up {
-margin-top: 400px;
-margin-left: auto;
+div#btn-container {
+    width: 400px;
+    height: 400px;
+    display: grid;
+    grid: 130px 130px 130px / 130px 130px 130px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+    place-items: center center;
+    margin-top: 700px;
+    gap: 4%;
+    
+  }
+  
+  button#left {
+    width: 100px;
+    height: 100px;
+    grid-row-start: 2;
+    grid-column-start: 1;
+    background-color: transparent;
+  }
+  
+  button#up {
+    width: 100px;
+    height: 100px;
+    grid-row-start: 1;
+    grid-column-start: 2;
+  }
+  
+  button#down {
+    width: 100px;
+    height: 100px;
+    grid-row-start: 3;
+    grid-column-start: 2;
+  }
+  
+  button#right {
+    width: 100px;
+    height: 100px;
+    grid-row-start: 2;
+    grid-column-start: 3;
+  }
+  button#reload {
+    width: 100px;
+    height: 100px;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    background-color: transparent;
+    border-color: transparent;
+  }
 
-}
+  
