@@ -99,21 +99,7 @@ div#btn-container {
     border-color: transparent;
   }
   
-  @media only screen and (max-width: 768px) {
-    button {
-      /* Styles for all buttons on smaller screens */
-      display: block;
-      margin: 10px auto;
-      width: 100%;
-      max-width: 200px;
-    }
-    img {
-      display: block;
-      margin: 10px auto;
-      width: 100%;
-      max-width: 200px;
-    }
-  }
+
   
 
   
